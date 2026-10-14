@@ -110,3 +110,21 @@ venv.bak/
 
 # ruff
 .ruff_cache/
+
+# Local documentation (existing tracked upstream docs are unaffected)
+[Rr][Ee][Aa][Dd][Mm][Ee]*
+/ENVIRONMENT.md
+
+# MGD datasets and generated experiment artifacts
+data/
+/MGD/manifests/
+/MGD/reports/
+/MGD/runs/
+/requirements/mgd-lock.txt
+
+# Model weights and exported models
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx

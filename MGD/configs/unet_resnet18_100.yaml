@@ -1,0 +1,23 @@
+experiment: unet_resnet18_mgd100
+seed: 42
+data:
+  manifest: manifests/mgd100_seed42.csv
+  image_size: [320, 640]  # height, width; preserve the original 1:2 aspect ratio
+  mask_threshold: 128
+model:
+  architecture: Unet
+  encoder: resnet18
+  encoder_weights: imagenet
+  in_channels: 3
+  classes: 1
+training:
+  epochs: 30
+  batch_size: 4
+  num_workers: 0  # reliable default on Windows
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  amp: true
+  prediction_threshold: 0.5
+  scheduler_patience: 4
+  scheduler_factor: 0.5
+  gradient_clip: 1.0

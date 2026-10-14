@@ -1,0 +1,5 @@
+data/subsets/
+runs/
+reports/*.png
+reports/preflight.json
+__pycache__/

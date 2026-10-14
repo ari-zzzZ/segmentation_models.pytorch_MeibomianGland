@@ -1,0 +1,8 @@
+# Install root project's CUDA torch/torchvision first (already installed locally).
+-e .
+albumentations>=2.0,<3
+opencv-python-headless>=4.10,<5
+matplotlib>=3.9,<4
+scikit-learn>=1.6,<2
+tensorboard>=2.18,<3
+PyYAML>=6,<7
